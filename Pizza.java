@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public abstract class Pizza {
 	String name;
 
@@ -63,5 +64,15 @@ public abstract class Pizza {
 			result.append("\n");
 		}
 		return result.toString();
+	}
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("test");
+		PizzaStore nyPizzaStore = new NYPizzaStore();
+		Pizza nyPizza = nyPizzaStore.orderPizza("cheese");
+		System.out.println(nyPizza);
+		PizzaStore cPizzaStore = new ChicagoPizzaStore();
+		Pizza cPizza = cPizzaStore.orderPizza("veggie");
+		System.out.println(cPizza);
 	}
 }

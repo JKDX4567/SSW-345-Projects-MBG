@@ -5,11 +5,11 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 	}
  
 	public Sauce createSauce() {
-		return new MarinaraSauce();
+		return new PlumTomatoeSauce();
 	}
  
 	public Cheese createCheese() {
-		return new ReggianoCheese();
+		return new MozzarellaCheese();
 	}
  
 	public Veggies[] createVeggies() {
@@ -22,6 +22,6 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 	}
 
 	public Clams createClam() {
-		return new FreshClams();
+		return new FrozenClams();
 	}
 }
