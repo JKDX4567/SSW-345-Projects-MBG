@@ -2,24 +2,15 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 public class Database{
-    private static Database instance;
-    private ArrayList<ProjectInvestment> projectList = new ArrayList<ProjectInvestment>();
-    private ArrayList<String> projectNameList = new ArrayList<String>();
-    private ArrayList<BankInvestment> investmentList = new ArrayList<BankInvestment>();
-    private ArrayList<String> investmentNameList = new ArrayList<String>();
-    private String database;
+    ArrayList<ProjectInvestment> projectList = new ArrayList<ProjectInvestment>();
+    ArrayList<String> projectNameList = new ArrayList<String>();
+    ArrayList<BankInvestment> investmentList = new ArrayList<BankInvestment>();
+    ArrayList<String> investmentNameList = new ArrayList<String>();
+    String database;
 
-    private Database(String database){
+    public Database(String database){
         this.database = database;
     }
-
-    public static Database getInstance(){
-        if (instance == null){
-            instance = new Database("theDatabase");
-        }
-        return instance;
-    }
-
     public void addProject(ProjectInvestment investment){
         projectList.add(investment);
         projectNameList.add(investment.getInvestmentName());

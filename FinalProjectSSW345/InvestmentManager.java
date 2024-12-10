@@ -7,7 +7,7 @@ public class InvestmentManager{
     // Used to read inputs, and decision is used to determine what to do (1 is default so it runs)
 
     public static void main(String[] args){
-        Database theDatabase = new Database("theDatabase");
+        Database theDatabase = Database.getInstance();
         while(decision != 0){
             System.out.println("What would you like to do? ");
             System.out.println("1: Add project ");	
