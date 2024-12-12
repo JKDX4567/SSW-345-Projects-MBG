@@ -2,13 +2,13 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 public class Database{
-    private static Database instance;
     private ArrayList<ProjectInvestment> projectList = new ArrayList<ProjectInvestment>();
     private ArrayList<String> projectNameList = new ArrayList<String>();
     private ArrayList<BankInvestment> investmentList = new ArrayList<BankInvestment>();
     private ArrayList<String> investmentNameList = new ArrayList<String>();
+    
     private String database;
-
+    private static Database instance;
     private Database(String database){
         this.database = database;
     }
